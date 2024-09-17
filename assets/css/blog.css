@@ -189,7 +189,203 @@ section.hero img {
   }
 }
 
+section.hero .log-sign {
+  margin-top: 20px;
+}
+
+section.hero .log-sign button {
+  outline: none;
+  font-size: 18px;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+section.hero .log-sign button:active {
+  animation: btn-scale 1s;
+}
+
+section.hero .log-sign button.login {
+  background-color: #229799;
+  padding: 10px 20px;
+  color: white;
+  margin-right: 10px;
+}
+section.hero .log-sign button.login:hover {
+  background-color: #48cfcb;
+}
+section.hero .log-sign button.signup {
+  padding: 9px 20px;
+  border: 1px solid #229799;
+  color: #229799;
+}
+section.hero a {
+  position: absolute;
+  bottom: 20px;
+  color: #48cfcb;
+  font-size: 30px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  animation: icon-down 0.5s infinite alternate;
+}
+
 /* End Hero section */
+
+/* start Blog section */
+
+.main-title {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.main-title h2 {
+  font-size: 40px;
+  border-top: 1px solid #229799;
+  border-bottom: 1px solid #229799;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 30px;
+  color: #214252;
+}
+
+section.blog {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+section.blog .boxs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 400px));
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  section.blog .boxs {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  section.blog .boxs {
+    grid-template-columns: repeat(2, minmax(350px, 400px));
+  }
+}
+
+section.blog .boxs .box {
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 3px 2px 10px 0px #bdb8b873;
+  position: relative;
+  overflow: hidden;
+}
+section.blog .boxs .box::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #214252;
+  border-radius: 20px;
+  z-index: -3;
+}
+section.blog .boxs .box::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 130px;
+  width: 100px;
+  height: 100px;
+  background-color: #214252;
+  border-radius: 20px;
+  z-index: -3;
+}
+section.blog .boxs .box .image-box {
+  overflow: hidden;
+  border-radius: 20px;
+  height: 200px;
+}
+section.blog .boxs .box .image-box:hover img {
+  transform: scale(1.5);
+}
+section.blog .boxs .box .image-box img {
+  transition: 0.3s;
+  max-width: 100%;
+}
+section.blog .boxs .box article.text {
+  padding: 20px 0;
+}
+section.blog .boxs .box article.text h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+section.blog .boxs .box article.text h2 a {
+  color: #214252;
+}
+section.blog .boxs .box article.text p {
+  color: #333;
+  line-height: 1.6;
+  word-spacing: 1px;
+}
+
+.third {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.third a {
+  color: #214252;
+  font-size: 18px;
+}
+
+.third a i {
+  font-size: 14px;
+  margin-right: 5px;
+  animation: icno-animate 1s alternate infinite;
+}
+
+section.blog .boxs .box .avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section.blog .boxs .box .avatar img {
+  max-width: 40px;
+}
+
+section.blog .boxs .box .avatar .txt {
+  width: 100%;
+}
+section.blog .boxs .box .avatar .txt h3 {
+  font-size: 20px;
+}
+section.blog .boxs .box .txt span {
+  font-size: 12px;
+  color: #229799;
+}
+
+/* End Blog section */
+
+/* start Footer  */
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+/* end Footer  */
 
 @keyframes image {
   from {
@@ -198,5 +394,44 @@ section.hero img {
 
   to {
     transform: translateY(-10px) translateX(10px);
+  }
+}
+
+@keyframes icon-down {
+  from {
+    transform: translateY(5px);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes btn-scale {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes icno-animate {
+  from {
+    transform: translateX(-3px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes waving {
+  from {
+    transform: translateX(-50%) skew(0, -10deg);
+  }
+
+  to {
+    transform: translateX(-30%) skew(10deg, 0);
   }
 }
