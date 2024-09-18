@@ -284,33 +284,20 @@ section.blog .boxs .box {
   box-shadow: 3px 2px 10px 0px #bdb8b873;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-section.blog .boxs .box::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 100px;
-  height: 100px;
-  background-color: #214252;
-  border-radius: 20px;
-  z-index: -3;
+
+section.blog .boxs .box .box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
-section.blog .boxs .box::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 130px;
-  width: 100px;
-  height: 100px;
-  background-color: #214252;
-  border-radius: 20px;
-  z-index: -3;
-}
+
 section.blog .boxs .box .image-box {
   overflow: hidden;
   border-radius: 20px;
-  height: 200px;
   position: relative;
 }
 
@@ -320,6 +307,8 @@ section.blog .boxs .box .image-box:hover img {
 section.blog .boxs .box .image-box img {
   transition: 0.3s;
   max-width: 100%;
+  transform: scale(1.1);
+  object-fit: cover;
 }
 section.blog .boxs .box article.text {
   padding: 20px 0;
@@ -416,15 +405,6 @@ footer {
 
   to {
     transform: scale(1);
-  }
-}
-
-@keyframes icno-animate {
-  from {
-    transform: translateX(-3px);
-  }
-  to {
-    transform: translateX(5px);
   }
 }
 
