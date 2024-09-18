@@ -176,7 +176,6 @@ section.hero article.text p {
 
 section.hero img {
   max-width: 550px;
-  animation: image 1.5s alternate linear infinite;
 }
 
 @media (max-width: 600px) {
@@ -205,10 +204,6 @@ section.hero .log-sign button {
   transition: 0.3s;
 }
 
-section.hero .log-sign button:active {
-  animation: btn-scale 1s;
-}
-
 section.hero .log-sign button.login {
   background-color: #229799;
   padding: 10px 20px;
@@ -231,7 +226,6 @@ section.hero a {
   color: #48cfcb;
   font-size: 30px;
   cursor: pointer;
-  animation: icon-down 0.5s infinite alternate;
 }
 
 /* End Hero section */
@@ -342,7 +336,6 @@ section.blog .boxs .box article.text p {
 .third a i {
   font-size: 14px;
   margin-right: 5px;
-  animation: icno-animate 1s alternate infinite;
 }
 
 section.blog .boxs .box .avatar {
@@ -377,43 +370,3 @@ footer {
 }
 
 /* end Footer  */
-
-@keyframes image {
-  from {
-    transform: translateY(10px) translateX(-10px);
-  }
-
-  to {
-    transform: translateY(-10px) translateX(10px);
-  }
-}
-
-@keyframes icon-down {
-  from {
-    transform: translateY(5px);
-  }
-
-  to {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes btn-scale {
-  from {
-    transform: scale(0.9);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes waving {
-  from {
-    transform: translateX(-50%) skew(0, -10deg);
-  }
-
-  to {
-    transform: translateX(-30%) skew(10deg, 0);
-  }
-}

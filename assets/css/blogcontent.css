@@ -1,0 +1,164 @@
+/* start bar */
+
+.bar {
+  margin: 10px auto;
+}
+
+.bar ul {
+  display: flex;
+  gap: 5px;
+}
+
+.bar ul li a {
+  color: #214252;
+  text-decoration: underline;
+}
+.bar ul li a i {
+  margin-right: 5px;
+}
+
+/* End bar */
+
+/* start blog content */
+
+.blog-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .blog-content {
+    flex-direction: column;
+  }
+}
+.blog-content .main-blog {
+  flex: 1;
+}
+.blog-content .main-blog .txt {
+  max-width: 100%;
+}
+.blog-content .main-blog .txt p.date {
+  text-align: right;
+  font-size: 15px;
+  color: #333;
+}
+.blog-content .main-blog .txt p.date a {
+  color: #0075ff;
+}
+.blog-content .main-blog .txt h1 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.blog-content .main-blog .txt p.main-p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.blog-content .main-blog .txt ol {
+  margin: 10px 0;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.blog-content .main-blog .txt h2 {
+  font-size: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+.blog-content .main-blog .txt .post-state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-content .main-blog .txt .post-state span {
+  margin-top: 10px;
+  display: inline-block;
+  border: 1px solid;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.blog-content .main-blog .txt .post-state span.new-post {
+  border-color: #0075ff;
+  color: #0075ff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.blog-content article.nav {
+  max-width: 300px;
+}
+@media (max-width: 767px) {
+  .blog-content article.nav {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+}
+
+/* End blog content */
+
+/* start Nav  */
+
+article.nav {
+}
+article.nav .box {
+  background-color: #214252;
+  color: white;
+  padding: 20px;
+}
+article.nav .box h4 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+article.nav .box p {
+  line-height: 1.7;
+  color: #f5f5f5;
+}
+article.nav .archives {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+article.nav .archives h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+article.nav .archives ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+article.nav .archives ul li {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #333;
+}
+article.nav .other-links {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+article.nav .other-links h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+article.nav .other-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+article.nav .other-links ul li {
+  text-decoration: underline;
+}
+article.nav .other-links ul li a {
+  color: #333;
+}
+
+/* End Nav  */
