@@ -1,0 +1,45 @@
+/* start bar */
+
+.bar {
+  margin: 10px auto;
+}
+
+.bar ul {
+  display: flex;
+  gap: 5px;
+}
+.bar ul li {
+}
+.bar ul li a {
+  color: #214252;
+  text-decoration: underline;
+}
+.bar ul li a i {
+  margin-right: 5px;
+}
+
+/* End bar */
+
+/* start blog content */
+
+.blog-content {
+  display: flex;
+  height: calc(100vh - 150px);
+  gap: 20px;
+}
+.blog-content .main-blog {
+  flex: 1;
+}
+.blog-content .main-blog .txt {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.blog-content article.nav {
+  max-width: 300px;
+}
+
+/* End blog content */

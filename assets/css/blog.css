@@ -137,12 +137,14 @@ nav.navbar div.form-mobile input {
 /* start Hero section */
 
 section.hero {
+  background-color: #f5f5f5;
+}
+section.hero > div {
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: calc(100vh - 63px);
-  padding: 30px;
-  background-color: #f5f5f5;
 }
 
 section.hero article.text h2 {
@@ -224,10 +226,11 @@ section.hero .log-sign button.signup {
 section.hero a {
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   color: #48cfcb;
   font-size: 30px;
   cursor: pointer;
-  transform: translate(-50%, -50%);
   animation: icon-down 0.5s infinite alternate;
 }
 
@@ -248,11 +251,6 @@ section.hero a {
   margin: 0 auto;
   padding: 10px 30px;
   color: #214252;
-}
-
-section.blog {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 section.blog .boxs {
@@ -313,7 +311,9 @@ section.blog .boxs .box .image-box {
   overflow: hidden;
   border-radius: 20px;
   height: 200px;
+  position: relative;
 }
+
 section.blog .boxs .box .image-box:hover img {
   transform: scale(1.5);
 }
@@ -329,6 +329,7 @@ section.blog .boxs .box article.text h2 {
   margin-bottom: 10px;
 }
 section.blog .boxs .box article.text h2 a {
+  text-decoration: underline;
   color: #214252;
 }
 section.blog .boxs .box article.text p {
@@ -346,6 +347,7 @@ section.blog .boxs .box article.text p {
 .third a {
   color: #214252;
   font-size: 18px;
+  text-decoration: underline;
 }
 
 .third a i {
