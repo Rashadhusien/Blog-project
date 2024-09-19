@@ -1,15 +1,4 @@
-/* 
-  Navbar
-  Hero section
-
-
-
-  key frames
-
-
-*/
-
-/* start Navbar */
+/* Navbar */
 
 nav.navbar {
   background-color: #214252;
@@ -22,6 +11,7 @@ nav.navbar div.nav-content {
   align-items: center;
   position: relative;
 }
+
 nav.navbar a.nav-header {
   color: #f5f5f5;
   font-size: 35px;
@@ -32,6 +22,7 @@ nav.navbar a.nav-header {
 nav.navbar i.bars {
   display: none;
 }
+
 @media (max-width: 768px) {
   nav.navbar i.bars {
     display: block;
@@ -39,14 +30,10 @@ nav.navbar i.bars {
     color: #f5f5f5;
     cursor: pointer;
   }
-  nav.navbar i.bars:hover ~ ul {
-    z-index: 100;
-    opacity: 1;
-  }
 
-  nav.navbar i.bars:hover ~ ul li {
-    transition-delay: 2s;
-    display: block;
+  nav.navbar i.bars:hover ~ ul {
+    opacity: 1;
+    z-index: 5;
   }
 }
 
@@ -58,19 +45,18 @@ nav.navbar ul {
 
 @media (max-width: 768px) {
   nav.navbar ul {
-    position: fixed;
-    top: 60px;
+    position: absolute;
+    top: 45px;
     left: 0;
     background-color: #214252;
     flex-direction: column;
     width: 100%;
     text-align: left;
-    align-items: start;
     padding-left: 20px;
     padding-block: 10px;
-    z-index: -10;
-    opacity: 0;
     transition: 0.3s ease;
+    opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -81,7 +67,6 @@ nav.navbar ul li {
 @media (max-width: 768px) {
   nav.navbar ul li {
     width: 100%;
-    display: none;
   }
 }
 
@@ -114,6 +99,7 @@ nav.navbar div.form-mobile i {
   color: white;
   margin-right: 5px;
 }
+
 nav.navbar div.form input,
 nav.navbar div.form-mobile input {
   border: none;
@@ -127,18 +113,18 @@ nav.navbar div.form-mobile input {
   nav.navbar div.form {
     display: none;
   }
+
   nav.navbar div.form-mobile {
     display: block;
   }
 }
 
-/* End Navbar */
-
-/* start Hero section */
+/* Hero section */
 
 section.hero {
   background-color: #f5f5f5;
 }
+
 section.hero > div {
   position: relative;
   display: flex;
@@ -210,14 +196,17 @@ section.hero .log-sign button.login {
   color: white;
   margin-right: 10px;
 }
+
 section.hero .log-sign button.login:hover {
   background-color: #48cfcb;
 }
+
 section.hero .log-sign button.signup {
   padding: 9px 20px;
   border: 1px solid #229799;
   color: #229799;
 }
+
 section.hero a {
   position: absolute;
   bottom: 20px;
@@ -228,9 +217,7 @@ section.hero a {
   cursor: pointer;
 }
 
-/* End Hero section */
-
-/* start Blog section */
+/* Blog section */
 
 .main-title {
   text-align: center;
@@ -298,23 +285,28 @@ section.blog .boxs .box .image-box {
 section.blog .boxs .box .image-box:hover img {
   transform: scale(1.5);
 }
+
 section.blog .boxs .box .image-box img {
   transition: 0.3s;
   max-width: 100%;
   transform: scale(1.1);
   object-fit: cover;
 }
+
 section.blog .boxs .box article.text {
   padding: 20px 0;
 }
+
 section.blog .boxs .box article.text h2 {
   font-size: 35px;
   margin-bottom: 10px;
 }
+
 section.blog .boxs .box article.text h2 a {
   text-decoration: underline;
   color: #214252;
 }
+
 section.blog .boxs .box article.text p {
   color: #333;
   line-height: 1.6;
@@ -343,6 +335,7 @@ section.blog .boxs .box .avatar {
   align-items: center;
   gap: 8px;
 }
+
 section.blog .boxs .box .avatar img {
   max-width: 40px;
 }
@@ -350,17 +343,17 @@ section.blog .boxs .box .avatar img {
 section.blog .boxs .box .avatar .txt {
   width: 100%;
 }
+
 section.blog .boxs .box .avatar .txt h3 {
   font-size: 20px;
 }
+
 section.blog .boxs .box .txt span {
   font-size: 12px;
   color: #229799;
 }
 
-/* End Blog section */
-
-/* start Footer  */
+/* Footer */
 
 footer {
   padding: 20px;
@@ -368,5 +361,3 @@ footer {
   color: white;
   text-align: center;
 }
-
-/* end Footer  */
