@@ -56,6 +56,7 @@ section.blog .boxs .box .box-content {
 }
 
 section.blog .boxs .box .image-box {
+  margin: 0;
   overflow: hidden;
   border-radius: 20px;
   position: relative;
