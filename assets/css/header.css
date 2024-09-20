@@ -1,0 +1,118 @@
+nav.navbar {
+  background-color: #214252;
+  padding-block: 10px;
+}
+
+nav.navbar div.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav.navbar a.nav-header {
+  color: #f5f5f5;
+  font-size: 35px;
+  font-weight: 500;
+  margin: 0;
+}
+
+nav.navbar i.bars {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav.navbar i.bars {
+    display: block;
+    font-size: 25px;
+    color: #f5f5f5;
+    cursor: pointer;
+  }
+
+  nav.navbar i.bars:hover ~ ul {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+nav.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+@media (max-width: 768px) {
+  nav.navbar ul {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #214252;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    padding-block: 10px;
+    transition: 0.3s ease;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+nav.navbar ul li {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  nav.navbar ul li {
+    width: 100%;
+  }
+}
+
+nav.navbar ul li a {
+  color: #f5f5f5;
+  opacity: 0.7;
+}
+
+nav.navbar ul li:hover a,
+nav.navbar ul li a.active {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+nav.navbar div.form,
+nav.navbar div.form-mobile {
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+nav.navbar div.form-mobile {
+  display: none;
+  width: 100%;
+}
+
+nav.navbar div.form i,
+nav.navbar div.form-mobile i {
+  font-size: 16px;
+  color: white;
+  margin-right: 5px;
+}
+
+nav.navbar div.form input,
+nav.navbar div.form-mobile input {
+  border: none;
+  outline: none;
+  caret-color: white;
+  color: white;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  nav.navbar div.form {
+    display: none;
+  }
+
+  nav.navbar div.form-mobile {
+    display: block;
+  }
+}
